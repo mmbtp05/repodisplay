@@ -24,7 +24,7 @@ async function fetchRepos(page,itemsPerPage) {
     }
 }
 
-async function displayUser(){
+async function displayUser(username){
     const response = await fetch(`https://server-pxer.onrender.com/userInfo`);
     const { user } = await response.json();
     
