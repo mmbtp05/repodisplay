@@ -14,7 +14,7 @@ let itemsPerPage = 10;
 
 async function fetchRepos(page,itemsPerPage) {
     try {
-        const response = await fetch(`http://localhost:8080/repos?page=${page}&perPage=${itemsPerPage}`);
+        const response = await fetch(`https://server-pxer.onrender.com/repos?page=${page}&perPage=${itemsPerPage}`);
         const { paginatedRepos, totalRepos } = await response.json();
         showLoading();
         displayRepos(paginatedRepos);
@@ -25,7 +25,7 @@ async function fetchRepos(page,itemsPerPage) {
 }
 
 async function displayUser(){
-    const response = await fetch(`http://localhost:8080/userInfo`);
+    const response = await fetch(`https://server-pxer.onrender.com/userInfo`);
     const { user } = await response.json();
     
     avatarElement.innerHTML = `<img src=${user.avatar_url} width="400" height="400"/>`;
