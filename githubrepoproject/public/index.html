@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Info</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="username"></h1>
+        </header>
+
+        <section id="user-info" class="info-section">
+            <h2>User Information</h2>
+            <div id="avatar"></div>
+            <p><strong>Bio:</strong> <span id="bio"></span></p>
+            <p><strong>Followers:</strong> <span id="followers"></span></p>
+            <p><strong>Following:</strong> <span id="following"></span></p>
+        </section>
+
+        <hr>
+
+
+
+        <form id="perPageForm">
+            <label for="perPage">Items per Page:</label>
+            <select id="perPage" name="perPage">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            <button type="submit">Apply</button>
+        </form>
+
+
+        <section id="repo-list" class="info-section">
+            <h2>Repositories</h2>
+            <ul id="repos"></ul>
+            <div class="loader" id="loading"></div>
+            <div id="pagination"></div>
+            
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
